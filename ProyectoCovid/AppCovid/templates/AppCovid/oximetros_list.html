@@ -1,0 +1,31 @@
+{% extends "AppCovid/padre.html" %}
+
+{% load static %} 
+
+        {% block contenido2 %} 
+
+
+            <h1 class="mb-1">Lista de Oximetros</h1>
+
+        {% endblock %}
+
+        {% block contenido %} 
+
+            <p> Aca estan todos los Oximetros: </p> <br>
+            <ul>
+                {% for oximetros in object_list %}
+            <li>
+                <p> MARCA: {{ oximetros.marca}}</p>
+
+                <p>
+                <a href="{% url 'Detail' oximetros.id %}"> Ver mas <a>
+                <a href="{% url 'Edit' oximetros.id %}"> Editar <a>
+                <a href="{% url 'Delete' oximetros.id %}">Borrar <a>
+
+            </p>
+
+            </li>
+            {% endfor %}
+
+            </ul>
+        {% endblock %}

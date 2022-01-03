@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+        {% block contenido2 %}
+            <h1 class="mb-1">Detalle de los oximetros</h1>
+        {% endblock %}
+
+
+        {% block contenido %}
+
+
+          <p>Marca del oximetro: <i> {{ oximetroa.marca}}</i></p>
+          <p>Origen del Oximetro: <i> {{ oximetro.origen}}</i></p>
+          <p>Precio: <i> {{ oximetro.precio}}</i></p>
+          <p>Es importado: <i> {{ oximetro.esImportado}}</i></p>
+
+
+          <p>
+
+            <a href="{% url 'List' %}">Regresar</a>
+
+          </p>
+         
+
+        {% endblock %}
